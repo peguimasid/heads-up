@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: heads_up_postgres
+    image: 'postgres'
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: heads_up_dev
+    volumes:
+      - ./data/pg:/data/postgres
